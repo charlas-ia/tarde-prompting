@@ -390,7 +390,7 @@ body.screen-mode .banner b{font-size:clamp(24px,3vw,46px)}
 var KEY='tarde-prompts-v1';
 var NS='http://www.w3.org/2000/svg';
 var LEVELS=[{n:'Café solo',min:0},{n:'Cortado',min:20},{n:'Capuchino',min:45},{n:'Barista IA',min:80}];
-var PTS={'warm.done':5,'demo.done':5,'t1.done':3,'t2.done':3,'t3.done':3,
+var PTS={'warm.done':5,'demo.done':5,
   'r1.R':2,'r1.C':2,'r1.T':2,'r1.F':2,'r1.done':10,
   'fa.done':15,'fb.done':15,'fc.done':15,'fd.done':15,
   'fe.public':0,'fe.done':12,'fe.v1':2,'fe.v2':2,'fe.v3':2,'fe.v4':2,'ff.done':12,'ff.v1':4,'ff.v2':4,'chuleta.done':10};
@@ -457,15 +457,6 @@ var MISSIONS=[
      'Contéstala: pide disculpas, ofrece envío gratis en su próximo pedido y explica cómo evitaréis que se repita. No inventes datos del pedido.',
      'Máximo 120 palabras, en tres párrafos cortos y con tono cercano y profesional.'),mat:MAT_RECL,matLabel:'RECLAMACIÓN'},
    {t:'done',id:'demo.done',pts:5,label:'He comparado las dos respuestas'}
- ]},
- {id:'trucos',ref:'Diapositiva 13',title:'Las 3 técnicas más usadas',max:9,items:['t1.done','t2.done','t3.done'],blocks:[
-   {t:'p',text:'Con RCTF tienes la base. Estas tres técnicas son las que más se usan y cada una da un paso más: en la 1 mandas tú, en la 2 la IA te pregunta y en la 3 la IA escribe el prompt por ti.'},
-   {t:'trick',title:'1 · Iterar: es una conversación',text:'Si no te convence la respuesta, no empieces de cero: pide cambios sobre lo que ya tienes. Prueba uno sobre tu respuesta anterior.',
-     prompts:['Hazlo más corto: máximo 60 palabras.','Hazlo más formal.','Quita el último párrafo.'],id:'t1.done',label:'Lo he probado'},
-   {t:'trick',title:'2 · Pídele que te pregunte',text:'Deja que la IA detecte lo que le falta antes de responder. Úsala cuando la tarea es nueva o no tienes claro qué contexto necesita.',
-     prompts:['Quiero contestar a un cliente que se queja y necesito un correo. Antes de responder, hazme las preguntas que necesites, de una en una.'],id:'t2.done',label:'Lo he probado'},
-   {t:'trick',title:'3 · Meta-prompting: que la IA mejore tu prompt',text:'Usa la IA para escribir y mejorar tus propias instrucciones. ¿Te acuerdas de «Contesta esta reclamación.»? Pídele que lo mejore, o que escriba el prompt desde cero.',
-     prompts:['Mejora este prompt para obtener un resultado más útil. Dime qué le falta (rol, contexto, tarea o formato) y devuélvemelo reescrito:\n\n«Contesta esta reclamación.»','Escríbeme un prompt RCTF para esta tarea: [describe qué quieres conseguir]. Antes de escribirlo, hazme las preguntas que necesites.'],id:'t3.done',label:'Lo he probado'}
  ]},
  {id:'tablon',ref:'Diapositiva 15',title:'La regla de oro',max:5,quiz:true,items:[],blocks:[
    {t:'p',text:'Si no lo publicarías en tus redes sociales, no lo pegues en una IA externa. ¿Qué harías con cada texto?'},
